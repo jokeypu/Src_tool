@@ -8,7 +8,7 @@ fi
 if [ ! -d $HOME/workfs ];then
 ln -s /workfs/bes/${USER} $HOME/workfs
 fi
-cp -r /afs/ihep.ac.cn/users/p/puqing/Src_tool/config_v5  $HOME/home
-mv $HOME/home/config_v5/ $HOME/home/MyConfig
+cp -r /afs/ihep.ac.cn/users/p/puqing/Src_tool/config  $HOME/home
+mv $HOME/home/config/ $HOME/home/MyConfig
 cd $HOME/home/MyConfig
 source run.sh
