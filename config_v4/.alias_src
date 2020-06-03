@@ -1,4 +1,0 @@
-alias ..='cd ..'
-alias la='ls -a'
-alias ll='ls -l'
-alias wboss="echo Boss-$VV"
