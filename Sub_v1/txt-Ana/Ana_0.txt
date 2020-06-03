@@ -1,0 +1,18 @@
+#include "$ROOTIOROOT/share/jobOptions_ReadRec.txt"
+#include "$VERTEXFITROOT/share/jobOptions_VertexDbSvc.txt"
+#include "$MAGNETICFIELDROOT/share/MagneticField.txt"
+#include "$ABSCORROOT/share/jobOptions_AbsCor.txt"
+#include "$RHOPIALGROOT/share/jobOptions_Rhopi.txt"
+//#include "$Ana_path"
+
+// Input REC or DST file name 
+EventCnvSvc.digiRootInputFile = {"/afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/x_dst/Rhopi_0.dst"};
+
+// Set output level threshold (2=DEBUG, 3=INFO, 4=WARNING, 5=ERROR, 6=FATAL )
+MessageSvc.OutputLevel = 5;
+
+// Number of events to be processed (default is 10)
+ApplicationMgr.EvtMax = 5;
+
+ApplicationMgr.HistogramPersistency = "ROOT";
+NTupleSvc.Output = { "FILE1 DATAFILE='/afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/x_root/Rhopi_ana_0.root' OPT='NEW' TYP='ROOT'"};

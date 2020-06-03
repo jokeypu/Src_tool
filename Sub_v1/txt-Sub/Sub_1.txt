@@ -1,0 +1,20 @@
+#
+#
+#
+################  1  ################
+#ctrl#	boss.condor /afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/txt-Sim/Sim_1.txt
+##sleep 10
+#ctrl#	boss.condor /afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/txt-Rec/Rec_1.txt
+##sleep 10
+#ctrl#	boss.condor /afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/txt-Ana/Ana_1.txt
+#
+#
+################# 2 #################
+#step1       boss.condor /afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/txt-Sim/Sim_1.txt
+
+#step2       boss.condor /afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/txt-Rec/Rec_1.txt
+
+#step3       boss.condor /afs/ihep.ac.cn/users/p/puqing/Src_tool/Sub/txt-Ana/Ana_1.txt
+#
+#
+#

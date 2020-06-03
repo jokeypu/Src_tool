@@ -1,0 +1,4 @@
+1. Source当前目录下run.sh，之后会退出登陆
+2. 重新登陆后到本目录下source boss_config.sh ,会再次退出
+3. 再次登陆即可
+

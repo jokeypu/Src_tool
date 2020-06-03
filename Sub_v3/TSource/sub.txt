@@ -1,0 +1,20 @@
+#
+#
+#
+################  1  ################
+#ctrl#  {Sub}/txt-Sim/Sim_NUM.txt
+##sleep 10
+#ctrl#  {Sub}/txt-Rec/Rec_NUM.txt
+##sleep 10
+#ctrl#  {Sub}/txt-Ana/Ana_NUM.txt
+#
+#
+################# 2 #################
+#step1       boss.condor {Sub}/txt-Sim/Sim_NUM.txt
+
+#step2       boss.condor {Sub}/txt-Rec/Rec_NUM.txt
+
+#step3       boss.condor {Sub}/txt-Ana/Ana_NUM.txt
+#
+#
+#

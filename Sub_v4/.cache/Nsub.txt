@@ -1,0 +1,20 @@
+#
+#
+#
+################  1  ################
+#ctrl#  /scratchfs/bes/puqing/workarea/test/txt-Sim/Sim_NUM.txt
+##sleep 10
+#ctrl#  /scratchfs/bes/puqing/workarea/test/txt-Rec/Rec_NUM.txt
+##sleep 10
+#ctrl#  /scratchfs/bes/puqing/workarea/test/txt-Ana/Ana_NUM.txt
+#
+#
+################# 2 #################
+#step1       boss.condor /scratchfs/bes/puqing/workarea/test/txt-Sim/Sim_NUM.txt
+
+#step2       boss.condor /scratchfs/bes/puqing/workarea/test/txt-Rec/Rec_NUM.txt
+
+#step3       boss.condor /scratchfs/bes/puqing/workarea/test/txt-Ana/Ana_NUM.txt
+#
+#
+#
