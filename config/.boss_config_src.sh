@@ -6,15 +6,15 @@
 #Config
 #
 #################################################
-#VN=7.0.5;	let TV=86;			#
-VN=7.0.4;	let TV=86;			#
-#VN=7.0.3;	let TV=86;			#
-#VN=7.0.2;	let TV=86;			#
-#VN=6.6.5;	let TV=86;			#
-#VN=6.6.4;	let TV=80;			#
-#VN=6.6.4.p03;	let TV=80;			#
-#VN=6.6.4.p02;	let TV=80;			#
-#VN=6.6.4.p01;	let TV=80;			#
+#1#VN=7.0.5;	let TV=86;			#
+#2#VN=7.0.4;	let TV=86;			#
+#3#VN=7.0.3;	let TV=86;			#
+#4#VN=7.0.2;	let TV=86;			#
+#5#VN=6.6.5;	let TV=86;			#
+#6#VN=6.6.4;	let TV=80;			#
+#7#VN=6.6.4.p03;	let TV=80;			#
+#8#VN=6.6.4.p02;	let TV=80;			#
+#9#VN=6.6.4.p01;	let TV=80;			#
 #-----------------------------------------------#
 export MyWorkarea="/workfs/bes/${USER}";       	#
 export MyCmthome="$HOME/home";            	#
