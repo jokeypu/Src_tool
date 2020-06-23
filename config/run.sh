@@ -1,4 +1,5 @@
 config_path=$(echo $(pwd))
+#unset CMTPATH
 if [ -f $CMThome/cleanup.sh ];then
 source $CMThome/cleanup.sh
 fi
