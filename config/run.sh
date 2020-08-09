@@ -65,5 +65,34 @@ sed -i "s/#9#/echo '------ 90% ------'; /g" boss_config.sh;
 source boss_config.sh 
 sed -i "s/echo '------ 90% ------'; /#/g" $config_path/boss_config.sh;
 
-echo '------ 100% ------'
+cd $config_path
+sed -i "s/#10#/echo '------ 100% ------'; /g" boss_config.sh;
+source boss_config.sh
+sed -i "s/echo '------ 100% ------'; /#/g" $config_path/boss_config.sh;
+
+#cd $config_path
+#sed -i "s/#11#/echo '------ 110% ------'; /g" boss_config.sh;
+#source boss_config.sh
+#sed -i "s/echo '------ 110% ------'; /#/g" $config_path/boss_config.sh;
+
+#cd $config_path
+#sed -i "s/#12#/echo '------ 120% ------'; /g" boss_config.sh;
+#source boss_config.sh
+#sed -i "s/echo '------ 120% ------'; /#/g" $config_path/boss_config.sh;
+
+#cd $config_path
+#sed -i "s/#13#/echo '------ 130% ------'; /g" boss_config.sh;
+#source boss_config.sh
+#sed -i "s/echo '------ 130% ------'; /#/g" $config_path/boss_config.sh;
+
+#cd $config_path
+#sed -i "s/#14#/echo '------ 140% ------'; /g" boss_config.sh;
+#source boss_config.sh
+#sed -i "s/echo '------ 140% ------'; /#/g" $config_path/boss_config.sh;
+
+#cd $config_path
+#sed -i "s/#15#/echo '------ 150% ------'; /g" boss_config.sh;
+#source boss_config.sh
+#sed -i "s/echo '------ 150% ------'; /#/g" $config_path/boss_config.sh;
+
 mv $config_path/run.sh $config_path/.run.sh

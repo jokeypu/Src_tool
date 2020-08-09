@@ -5,20 +5,21 @@
 #--------------------------
 #Config
 #
-#################################################
-#1#VN=7.0.5;	let TV=86;			#
-#2#VN=7.0.4;	let TV=86;			#
-#3#VN=7.0.3;	let TV=86;			#
-#4#VN=7.0.2;	let TV=86;			#
-#5#VN=6.6.5;	let TV=86;			#
-#6#VN=6.6.4;	let TV=80;			#
-#7#VN=6.6.4.p03;	let TV=80;			#
-#8#VN=6.6.4.p02;	let TV=80;			#
-#9#VN=6.6.4.p01;	let TV=80;			#
-#-----------------------------------------------#
-export MyWorkarea="/workfs/bes/${USER}";       	#
-export MyCmthome="$HOME/home";            	#
-#################################################
+##############################################################
+#1#VN=6.6.4;            AD=''                    let TV=80;  #
+#2#VN=6.6.4.p01;        AD=''                    let TV=80;  #
+#3#VN=6.6.4.p02;        AD=''                    let TV=80;  #
+#4#VN=6.6.4.p03;        AD=''                    let TV=80;  #
+#5#VN=6.6.5.p01;        AD='-Slc6Centos7Compat'; let TV=86;  #
+#6#VN=7.0.3;            AD='-Slc6Centos7Compat'; let TV=86;  #
+#7#VN=7.0.3.p01;        AD='-Slc6Centos7Compat'; let TV=86;  #
+#8#VN=7.0.3.p02;        AD='-Slc6Centos7Compat'; let TV=86;  #
+#9#VN=7.0.4;            AD='-Slc6Centos7Compat'; let TV=86;  #
+#10#VN=7.0.5;           AD='-Slc6Centos7Compat'; let TV=86;  #
+#------------------------------------------------------------#
+export MyWorkarea="/workfs/bes/${USER}";                     #
+export MyCmthome="$HOME/home";                               #
+##############################################################
 #
 #
 #
@@ -46,7 +47,7 @@ if [ -d workarea-$VN ];then
 	rm -rf workarea-$VN;
 fi
 mkdir $MyWorkarea/workarea/workarea-$VN;
-cp /afs/ihep.ac.cn/bes3/offline/Boss/cmthome/cmthome-$VN/* $MyCmthome/cmthome/cmthome-$VN;
+cp /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-${VN}${AD}/* $MyCmthome/cmthome/cmthome-$VN;
 cd $MyCmthome/cmthome/cmthome-$VN;
 if [ $TV -eq 80 ];then
 	OLD='#set WorkArea "/ihepbatch/bes/maqm/workarea"';
@@ -55,7 +56,7 @@ else
 	OLD='#macro WorkArea "/ihepbatch/bes/maqm/workarea"';
 	NEW="macro WorkArea \"$MyWorkarea/workarea/workarea-$VN\"";
 fi
-sed -i "s:${OLD}:${NEW}:g" requirements;
+sed -i "/#Add your worarea to CMTPATH/a${NEW}" requirements;
 sed -i 's/#path_prepend CMTPATH "${WorkArea}"/path_prepend CMTPATH "${WorkArea}"/g' requirements;
 sed -i 's/#path_remove CMTPATH  "${WorkArea}"/path_remove CMTPATH  "${WorkArea}"/g' requirements;
 sed -i 's/maqm@/bes3@/g' setupCVS.sh;
